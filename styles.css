@@ -1,0 +1,145 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Contenedor genérico */
+.container {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 20px 25px;
+  margin-top: 40px;
+}
+
+/* Ocultar/mostrar */
+.hidden {
+  display: none;
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Estilo de pestañas */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-weight: bold;
+}
+
+.tab.active {
+  border-bottom-color: #007bff;
+  color: #007bff;
+}
+
+/* Formularios */
+.form {
+  display: none;
+}
+
+.form.active-form {
+  display: block;
+}
+
+/* Campos del formulario */
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Botones */
+button[type="submit"],
+button[type="button"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+/* Botón de cerrar sesión */
+#logout-btn {
+  margin-bottom: 20px;
+  background-color: #dc3545;
+}
+
+#logout-btn:hover {
+  background-color: #b02a37;
+}
+
+/* Mensajes de estado (éxito/error) */
+#login-status,
+#signup-status,
+#contact-status {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+#login-status.success,
+#signup-status.success,
+#contact-status.success {
+  color: green;
+}
+
+#login-status.error,
+#signup-status.error,
+#contact-status.error {
+  color: red;
+}
